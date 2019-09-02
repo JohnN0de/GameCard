@@ -1,0 +1,23 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  UnitMakers in 'UnitMakers.pas' {FormMakers},
+  UnitHello in 'UnitHello.pas' {FormHello},
+  UnitHelloKey in 'UnitHelloKey.pas' {FormHelloKey},
+  UnitStartHello in 'UnitStartHello.pas' {FormStartHello};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'Пасьянс "Паук"';
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormMakers, FormMakers);
+  Application.CreateForm(TFormHello, FormHello);
+  Application.CreateForm(TFormHelloKey, FormHelloKey);
+  Application.CreateForm(TFormStartHello, FormStartHello);
+  Application.Run;
+end.
